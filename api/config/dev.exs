@@ -20,7 +20,7 @@ use Mix.Config
 # configured to run both http and https servers on
 # different ports.
 config :api, Api.Endpoint,
-  http: [port: 4000],
+  http: [port: 9000],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
@@ -51,6 +51,6 @@ config :api, Api.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
-  database: "postgres",
+  database: "api_dev",
   hostname: "localhost",
   pool_size: 10
