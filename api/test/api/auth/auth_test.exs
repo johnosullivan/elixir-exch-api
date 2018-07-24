@@ -6,9 +6,13 @@ defmodule MyAPI.AuthTest do
   describe "users" do
     alias MyAPI.Auth.User
 
-    @valid_attrs %{email: "some email", is_active: true}
-    @update_attrs %{email: "some updated email", is_active: false}
-    @invalid_attrs %{email: nil, is_active: nil}
+    @valid_attrs %{email: "some email", is_active: true, password: "some password"}
+    @update_attrs %{
+      email: "some updated email",
+      is_active: false,
+      password: "some updated password"
+    }
+    @invalid_attrs %{email: nil, is_active: nil, password: nil}
 
     def user_fixture(attrs \\ %{}) do
       {:ok, user} =
