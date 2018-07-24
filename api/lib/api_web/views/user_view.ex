@@ -17,6 +17,10 @@ defmodule MyAPIWeb.UserView do
       is_active: user.is_active}
   end
 
+  def render("version.json", %{version: version}) do
+    %{version: version}
+  end
+
   def render("sign_in.json", %{user: user}) do
     %{
       data: %{
@@ -27,5 +31,5 @@ defmodule MyAPIWeb.UserView do
       }
     }
   end
-  
+
 end

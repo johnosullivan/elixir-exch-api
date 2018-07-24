@@ -6,6 +6,10 @@ defmodule MyAPIWeb.UserController do
 
   action_fallback MyAPIWeb.FallbackController
 
+  def version(conn, _params) do
+    render(conn, "version.json", version: "v1.0")
+  end
+
   def index(conn, _params) do
     users = Auth.list_users()
     render(conn, "index.json", users: users)

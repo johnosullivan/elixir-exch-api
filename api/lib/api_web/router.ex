@@ -10,12 +10,13 @@ defmodule MyAPIWeb.Router do
     plug(:ensure_authenticated)
   end
 
-  scope "/api", MyAPIWeb do
+  scope "/api/v1.0", MyAPIWeb do
     pipe_through(:api)
     post("/users/sign_in", UserController, :sign_in)
+    get("/version", UserController, :version)
   end
 
-  scope "/api", MyAPIWeb do
+  scope "/api/v1.0", MyAPIWeb do
     pipe_through([:api, :api_auth])
     resources("/users", UserController, except: [:new, :edit])
   end
