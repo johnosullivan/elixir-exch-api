@@ -40,7 +40,10 @@ defmodule MyAPI.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:bcrypt_elixir, "~> 1.0"},
-      {:corsica, "~> 1.0"}
+      {:corsica, "~> 1.0"},
+      {:poison, "~> 3.1"},
+      {:elixir_uuid, "~> 1.2"},
+      {:guardian, "~> 1.0"}
     ]
   end
 

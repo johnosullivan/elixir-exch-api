@@ -6,7 +6,10 @@ defmodule MyAPI.Repo.Migrations.CreateUsers do
       add(:email, :string, null: false)
       add(:password_hash, :string)
       add(:is_active, :boolean, default: false, null: false)
-
+      add(:uuid, :string)
+      add(:first_name, :string)
+      add(:last_name, :string)
+      add(:two_factor_auth, :string)
       timestamps()
     end
 
