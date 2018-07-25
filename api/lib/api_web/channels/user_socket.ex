@@ -2,7 +2,7 @@ defmodule MyAPIWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", MyAPIWeb.RoomChannel
+  #channel "room:*", MyAPIWeb.RoomChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
@@ -20,6 +20,7 @@ defmodule MyAPIWeb.UserSocket do
   # See `Phoenix.Token` documentation for examples in
   # performing token verification on connect.
   def connect(_params, socket) do
+    IO.puts "socket connected"
     {:ok, socket}
   end
 

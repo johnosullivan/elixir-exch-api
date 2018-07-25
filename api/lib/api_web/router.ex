@@ -24,13 +24,13 @@ defmodule MyAPIWeb.Router do
   # Plug function
   defp ensure_authenticated(conn, _opts) do
     current_user_id = get_session(conn, :current_user_id)
-
+    
     if current_user_id do
       conn
     else
       conn
       |> put_status(:unauthorized)
-      |> render(MyAPIWeb.ErrorView, "401.json", message: "Unauthenticated user")
+      |> render(MyAPIWeb.ErrorView, "401.json", message: "Unauthenticated User")
       |> halt()
     end
   end
