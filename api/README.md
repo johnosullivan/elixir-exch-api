@@ -17,3 +17,10 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * Docs: https://hexdocs.pm/phoenix
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
+
+
+MyAPI.Auth.create_user(%{email: "john@imbrex.io", password: "test_password", first_name: "John", last_name: "O'Sullivan", uuid: UUID.uuid4() })
+
+MyAPI.Auth.create_user(%{email: "john+123@imbrex.io", password: "test_password", first_name: "Jimmy", last_name: "O'Sullivan", uuid: UUID.uuid4() })
+
+MyAPI.Auth.create_user(%{email: "james@imbrex.io", password: "test_password", first_name: "James", last_name: "O'Sullivan", uuid: UUID.uuid4() })

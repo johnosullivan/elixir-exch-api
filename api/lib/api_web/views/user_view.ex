@@ -11,10 +11,13 @@ defmodule MyAPIWeb.UserView do
   end
 
   def render("user.json", %{user: user}) do
-    %{id: user.id,
+    %{
+      uuid: user.uuid,
       email: user.email,
-      password: user.password,
-      is_active: user.is_active}
+      is_active: user.is_active,
+      first_name: user.first_name,
+      last_name: user.last_name
+    }
   end
 
   def render("version.json", %{version: version}) do
@@ -25,8 +28,10 @@ defmodule MyAPIWeb.UserView do
     %{
       data: %{
         user: %{
-          id: user.id,
-          email: user.email
+          uuid: user.uuid,
+          email: user.email,
+          first_name: user.first_name,
+          last_name: user.last_name
         }
       }
     }
