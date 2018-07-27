@@ -21,6 +21,7 @@ defmodule MyAPIWeb.UserSocket do
   # performing token verification on connect.
   def connect(_params, socket) do
     IO.puts "socket connected"
+    IO.puts _params
     {:ok, socket}
   end
 
