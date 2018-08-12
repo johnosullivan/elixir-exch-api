@@ -13,7 +13,7 @@ defmodule MyAPIWeb.Router do
   scope "/api/v1.0", MyAPIWeb do
     pipe_through(:api)
     post("/users/sign_in", UserController, :sign_in)
-    get("/version", UserController, :version)
+    # get("/version", UserController, :version)
   end
 
   scope "/api/v1.0", MyAPIWeb do
@@ -24,7 +24,7 @@ defmodule MyAPIWeb.Router do
   # Plug function
   defp ensure_authenticated(conn, _opts) do
     current_user_id = get_session(conn, :current_user_id)
-    
+
     if current_user_id do
       conn
     else
