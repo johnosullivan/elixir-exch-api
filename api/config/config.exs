@@ -27,6 +27,9 @@ config :api, MyApp.Guardian,
   issuer: "elixir_api",
   secret_key: "nH8mLYfxRRDrtqUfnVK629qWRMGOUkfivlrBIQdLH9xLJfIyXUs0CL4oBfbkiVI6"
 
+config :ethereumex,
+  url: "https://rinkeby.infura.io"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"

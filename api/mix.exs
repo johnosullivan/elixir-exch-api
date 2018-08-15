@@ -20,7 +20,7 @@ defmodule MyAPI.Mixfile do
   def application do
     [
       mod: {MyAPI.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :ethereumex]
     ]
   end
 
@@ -43,7 +43,10 @@ defmodule MyAPI.Mixfile do
       {:corsica, "~> 1.0"},
       {:poison, "~> 3.1"},
       {:elixir_uuid, "~> 1.2"},
-      {:guardian, "~> 1.0"}
+      {:guardian, "~> 1.0"},
+      {:decimal, "~> 1.0"},
+      {:ethereumex, "~> 0.3.3"},
+      {:hexate,  ">= 0.6.0"}
     ]
   end
 
