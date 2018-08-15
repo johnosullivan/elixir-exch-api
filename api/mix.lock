@@ -1,5 +1,5 @@
 %{
-  "abi": {:hex, :abi, "0.1.12", "87ae04cb09e2308db7b3c350584dc3934de0e308f6a056ba82be5756b081a1ca", [:mix], [{:exth_crypto, "~> 0.1.4", [hex: :exth_crypto, repo: "hexpm", optional: false]}], "hexpm"},
+  "abi": {:hex, :abi, "0.1.8", "db416b41735fcc824a273bcdac2741f8d78582956fbe7b785c2fb9af240c020c", [:mix], [{:exth_crypto, "~> 0.1.4", [hex: :exth_crypto, repo: "hexpm", optional: false]}], "hexpm"},
   "base64url": {:hex, :base64url, "0.0.1", "36a90125f5948e3afd7be97662a1504b934dd5dac78451ca6e9abf85a10286be", [:rebar], [], "hexpm"},
   "bcrypt_elixir": {:hex, :bcrypt_elixir, "1.0.8", "940ce8156519574142a3c6e925e7a0eea7367c55b2817b3bd18806b0bbd4254e", [:make, :mix], [{:elixir_make, "~> 0.4", [hex: :elixir_make, repo: "hexpm", optional: false]}], "hexpm"},
   "binary": {:hex, :binary, "0.0.5", "20d816f7274ea34f1b673b4cff2fdb9ebec9391a7a68c349070d515c66b1b2cf", [:mix], [], "hexpm"},

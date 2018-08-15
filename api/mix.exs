@@ -46,7 +46,8 @@ defmodule MyAPI.Mixfile do
       {:guardian, "~> 1.0"},
       {:decimal, "~> 1.0"},
       {:ethereumex, "~> 0.3.3"},
-      {:hexate,  ">= 0.6.0"}
+      {:hexate,  ">= 0.6.0"},
+      {:abi, "~> 0.1.8"}
     ]
   end
 
