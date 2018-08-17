@@ -46,8 +46,7 @@ defmodule MyAPI.Mixfile do
       {:guardian, "~> 1.0"},
       {:decimal, "~> 1.0"},
       {:ethereumex, "~> 0.3.3"},
-      {:hexate,  ">= 0.6.0"},
-      {:abi, "~> 0.1.8"}
+      {:hexate,  ">= 0.6.0"}
     ]
   end
 
@@ -55,6 +54,7 @@ defmodule MyAPI.Mixfile do
   # For example, to create, migrate and run the seeds file at once:
   #
   #     $ mix ecto.setup
+  #     {:abi, "~> 0.1.8"}
   #
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
