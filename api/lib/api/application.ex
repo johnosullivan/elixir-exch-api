@@ -14,6 +14,7 @@ defmodule MyAPI.Application do
       supervisor(MyAPIWeb.Endpoint, []),
       # Start your own worker by calling: MyAPI.Worker.start_link(arg1, arg2, arg3)
       # worker(MyAPI.Worker, [arg1, arg2, arg3]),
+      {SimpleQueue, [1, 2, 3]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

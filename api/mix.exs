@@ -48,8 +48,7 @@ defmodule MyAPI.Mixfile do
       {:ethereumex, "~> 0.3.3"},
       {:hexate,  ">= 0.6.0"},
       {:faker, "~> 0.10.0"},
-      {:eastar, "~> 0.4.2"},
-      {:array, "~> 1.0.1"}
+      {:eastar, "~> 0.4.2"}
     ]
   end
 
