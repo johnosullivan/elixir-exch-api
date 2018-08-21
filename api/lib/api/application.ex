@@ -9,9 +9,9 @@ defmodule MyAPI.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
-      supervisor(MyAPI.Repo, []),
+      # supervisor(MyAPI.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(MyAPIWeb.Endpoint, []),
+      # supervisor(MyAPIWeb.Endpoint, []),
       # Start your own worker by calling: MyAPI.Worker.start_link(arg1, arg2, arg3)
       # worker(MyAPI.Worker, [arg1, arg2, arg3]),
       {SimpleQueue, [1, 2, 3]}
