@@ -20,7 +20,7 @@ defmodule MyAPI.Mixfile do
   def application do
     [
       mod: {MyAPI.Application, []},
-      extra_applications: [:logger, :runtime_tools, :ethereumex]
+      extra_applications: [:logger, :runtime_tools, :ethereumex, :jsonrpc2, :poison]
     ]
   end
 
@@ -48,7 +48,8 @@ defmodule MyAPI.Mixfile do
       {:ethereumex, "~> 0.3.3"},
       {:hexate,  ">= 0.6.0"},
       {:faker, "~> 0.10.0"},
-      {:eastar, "~> 0.4.2"}
+      {:eastar, "~> 0.4.2"},
+      {:jsonrpc2, "~> 1.0"}
     ]
   end
 

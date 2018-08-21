@@ -5,8 +5,12 @@
 # is restricted to this project.
 use Mix.Config
 
+config :jsonrpc2, :serializer, JSONRPC2.Serializers.Jiffy
+
 # General application configuration
 config :api,
+  rpc_url: "http://localhost:1234/rpc",
+  rpc_call_ts_eth: "Core.EthTransfer",
   namespace: MyAPI,
   ecto_repos: [MyAPI.Repo]
 
@@ -28,7 +32,7 @@ config :api, MyApp.Guardian,
   secret_key: "nH8mLYfxRRDrtqUfnVK629qWRMGOUkfivlrBIQdLH9xLJfIyXUs0CL4oBfbkiVI6"
 
 config :ethereumex,
-  url: "https://rinkeby.infura.io"
+  url: "http://127.0.0.1:8545"
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
