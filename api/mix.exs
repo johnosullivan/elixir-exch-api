@@ -20,7 +20,7 @@ defmodule MyAPI.Mixfile do
   def application do
     [
       mod: {MyAPI.Application, []},
-      extra_applications: [:logger, :runtime_tools, :ethereumex]
+      extra_applications: [:logger, :runtime_tools, :ethereumex, :jsonrpc2, :poison]
     ]
   end
 
@@ -47,9 +47,9 @@ defmodule MyAPI.Mixfile do
       {:decimal, "~> 1.0"},
       {:ethereumex, "~> 0.3.3"},
       {:hexate,  ">= 0.6.0"},
-      {:abi, "~> 0.1.8"},
-      {:blockchain, "~> 0.1.7"},
-      {:codepagex, "~> 0.1.4"}
+      {:faker, "~> 0.10.0"},
+      {:eastar, "~> 0.4.2"},
+      {:jsonrpc2, "~> 1.0"}
     ]
   end
 
@@ -57,6 +57,7 @@ defmodule MyAPI.Mixfile do
   # For example, to create, migrate and run the seeds file at once:
   #
   #     $ mix ecto.setup
+  #     {:abi, "~> 0.1.8"}
   #
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
