@@ -32,6 +32,45 @@ defmodule MyAPIHelper.Ethereum do
     Ethereumex.HttpClient.eth_send_raw_transaction(Poison.decode!(res.body)["result"])
   end
 
+  def contractCall(abi, function, params ,send_public, send_private, to_public, amount) do
+    
+    {_,count} = Ethereumex.HttpClient.eth_get_transaction_count(send_public)
+    
+    data = abi |> Poison.decode! 
+    |> ABI.parse_specification 
+    |> Enum.find(&(&1.function == function)) 
+    |> ABI.encode(params) 
+    |> Base.encode16(case: :lower)
+
+    final = "0x" <> data
+    IO.puts final
+
+    t = count |> String.slice(2..-1) |> Hexate.to_integer
+    IO.puts t
+
+    body = Poison.encode!(%{
+      "id" => :rand.uniform(999999999999999999999), 
+      "method" => Application.get_env(:api, :rpc_call_contract_eth),
+      "params" => [%{
+        "PrivateKey" => send_private, 
+        "PublicKey" => to_public,
+        "Amount" => amount, 
+        "Nonce" => count |> String.slice(2..-1) |> Hexate.to_integer,
+        "GasLimit" => 201000,
+        "GasPrice" => 201000,
+        "Data" => final
+      }]
+    })
+
+    {_,res}  = HTTPoison.post Application.get_env(:api, :rpc_url), body, [{"Content-Type", "application/json"}]
+
+    raw = Poison.decode!(res.body)["result"]
+    IO.puts raw
+
+    Ethereumex.HttpClient.eth_send_raw_transaction(raw)
+    
+  end
+
 
   
 

@@ -4,7 +4,7 @@
 		"inputs": [
 			{
 				"name": "val",
-				"type": "bytes"
+				"type": "bytes32"
 			}
 		],
 		"name": "setting",
@@ -26,7 +26,7 @@
 		"outputs": [
 			{
 				"name": "",
-				"type": "bytes"
+				"type": "bytes32"
 			}
 		],
 		"payable": false,
@@ -40,7 +40,7 @@
 		"outputs": [
 			{
 				"name": "",
-				"type": "bytes"
+				"type": "bytes32"
 			}
 		],
 		"payable": false,

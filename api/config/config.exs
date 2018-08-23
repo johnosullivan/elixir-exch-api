@@ -11,6 +11,7 @@ config :jsonrpc2, :serializer, JSONRPC2.Serializers.Jiffy
 config :api,
   rpc_url: "http://localhost:1234/rpc",
   rpc_call_ts_eth: "Core.EthTransfer",
+  rpc_call_contract_eth: "Core.EthContract",
   namespace: MyAPI,
   ecto_repos: [MyAPI.Repo]
 
