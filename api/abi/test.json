@@ -4,7 +4,7 @@
 		"inputs": [
 			{
 				"name": "val",
-				"type": "bytes32"
+				"type": "string"
 			}
 		],
 		"name": "setting",
@@ -26,7 +26,21 @@
 		"outputs": [
 			{
 				"name": "",
-				"type": "bytes32"
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "key",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
 			}
 		],
 		"payable": false,
@@ -40,7 +54,7 @@
 		"outputs": [
 			{
 				"name": "",
-				"type": "bytes32"
+				"type": "string"
 			}
 		],
 		"payable": false,
