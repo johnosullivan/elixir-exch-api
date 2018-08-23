@@ -51,7 +51,8 @@ defmodule MyAPI.Mixfile do
       {:eastar, "~> 0.4.2"},
       {:jsonrpc2, "~> 1.0"},
       {:abi, "~> 0.1.12"},
-      {:blockchain, "~> 0.1.6"}
+      {:blockchain, "~> 0.1.6"},
+      {:honeydew, "~> 1.2.4"}
     ]
   end
 
