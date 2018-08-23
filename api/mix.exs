@@ -49,7 +49,9 @@ defmodule MyAPI.Mixfile do
       {:hexate,  ">= 0.6.0"},
       {:faker, "~> 0.10.0"},
       {:eastar, "~> 0.4.2"},
-      {:jsonrpc2, "~> 1.0"}
+      {:jsonrpc2, "~> 1.0"},
+      {:abi, "~> 0.1.12"},
+      {:blockchain, "~> 0.1.6"}
     ]
   end
 
@@ -58,7 +60,7 @@ defmodule MyAPI.Mixfile do
   #
   #     $ mix ecto.setup
   #     {:abi, "~> 0.1.8"}
-  #
+  #     File.read!("abi/test.json") |> Poison.decode! |> ABI.parse_specification |> Enum.find(&(&1.function == "setting")) |> ABI.encode(["john was here"]) |> Base.encode16(case: :lower)
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [

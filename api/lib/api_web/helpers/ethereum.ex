@@ -24,13 +24,14 @@ defmodule MyAPIHelper.Ethereum do
         "PublicKey" => to_public,
         "Amount" => amount, 
         "Nonce" => count |> String.slice(2..-1) |> Hexate.to_integer,
-        "GasLimit" => 21000,
-        "GasPrice" => 21000
+        "GasLimit" => 201000,
+        "GasPrice" => 201000
       }]
     })
     {_,res}  = HTTPoison.post Application.get_env(:api, :rpc_url), body, [{"Content-Type", "application/json"}]
     Ethereumex.HttpClient.eth_send_raw_transaction(Poison.decode!(res.body)["result"])
   end
+
 
   
 
